@@ -1,0 +1,37 @@
+/* Dialog
+----------------------------------*/
+.ui-dialog { position: absolute; padding:0; width: 300px; overflow: hidden;
+background:background:url(images/dialogBg1.gif) repeat-x left top;
+border:1px solid #006ec3; }
+.ui-dialog .ui-dialog-titlebar {
+	height:29px;
+	width:100%;
+	background:url(images/dialogTitleBg.gif) repeat-x;
+	border-left:1px solid #6ec5e2;
+	border-rigth:1px solid #6ec5e2;
+	border-bottom:1px solid #006ec3; 
+	border-top:0px;padding-left:10px; position: relative;  }
+.ui-dialog .ui-dialog-title { float: left; font-size:14px; color:#FFF; line-height:29px;}  
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding:1px 20px 1px 1px; height: 18px; }
+.ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
+
+.ui-dialog .ui-dialog-content { position: relative; border: 0; padding:10px;
+background: url(images/dialogBg1.gif); overflow: auto; zoom: 1;border-bottom:1px solid #8cb4d2; }
+.ui-dialog .ui-dialog-buttonpane { text-align: right; border-width: 1px 0 0 0; border-color:#fff;
+background:url(images/dialogBg2.gif) repeat-x left bottom;
+height:36px; padding:5px 10px; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
+.ui-dialog .ui-dialog-buttonpane button {
+	float: right;
+	cursor: pointer; 
+	border:0px;
+	background:url(images/dialogTitleBg.gif) repeat-x;
+	height:25px;
+	width:80px;
+	color:#FFF;
+	font-size:12px;
+	letter-spacing:0px;
+}
+
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .ui-dialog-titlebar { cursor: move; }

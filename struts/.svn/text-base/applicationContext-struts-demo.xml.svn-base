@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+       default-lazy-init="true">
+
+	    <!-- DEMO -->
+    <bean id="baseDemoListAction" class="com.gmcc.webapp.action.demo.BaseDemoListAction" parent="baseAction" scope="prototype">   
+    </bean>
+    <bean id="baseDemoDataAction" class="com.gmcc.webapp.action.demo.BaseDemoDataAction" parent="baseAction" scope="prototype">        
+    	<property name="demoManager" ref="demoManager"/>
+    </bean>
+    
+    <bean id="advanceDemoListAction" class="com.gmcc.webapp.action.demo.AdvanceDemoListAction" parent="baseAction" scope="prototype">   
+    </bean>    
+    <bean id="advanceDemoDataAction" class="com.gmcc.webapp.action.demo.AdvanceDemoDataAction" parent="baseAction" scope="prototype">        
+    	<property name="demoManager" ref="demoManager"/>
+    </bean>
+    
+</beans>
+
+

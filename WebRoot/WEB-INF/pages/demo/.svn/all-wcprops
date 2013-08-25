@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/estore-common/!svn/ver/640/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/demo
+END
+baseDemoDataPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/estore-common/!svn/ver/640/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/demo/baseDemoDataPage.jsp
+END
+baseDemoListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/estore-common/!svn/ver/640/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/demo/baseDemoListPage.jsp
+END
+advanceDemoDataPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/estore-common/!svn/ver/640/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/demo/advanceDemoDataPage.jsp
+END
+advanceDemoListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/estore-common/!svn/ver/640/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/demo/advanceDemoListPage.jsp
+END

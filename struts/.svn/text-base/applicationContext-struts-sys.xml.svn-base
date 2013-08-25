@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+       default-lazy-init="true">
+
+	<bean id="baseAction"> 	    
+	    <property name="queryManager" ref="queryManager"/>
+	    <property name="cacheManager" ref="authorityManager"/>
+    </bean>
+   	
+   	<!-- 用户管理模块 -->
+    <bean id="userListAction" class="com.gmcc.webapp.action.sys.UserListAction" parent="baseAction" scope="prototype">   
+    	<property name="treeService" ref="treeService"/>
+   		<property name="userService" ref="userSysService"/>
+    </bean>
+    <bean id="userDataAction" class="com.gmcc.webapp.action.sys.UserDataAction" parent="baseAction" scope="prototype">
+        <property name="passwordEncoder" ref="passwordEncoder"/>
+        <property name="operateManager" ref="operateManager"/>
+        <property name="roleOperateManager" ref="roleOperateManagerImp"/>
+        <property name="authorityManager" ref="authorityManager"/>
+        <property name="treeService" ref="treeService"/>
+        <property name="compOperateManager" ref="operateManager"/>
+    </bean>
+    <bean id="passwordDataAction" class="com.gmcc.webapp.action.sys.PasswordDataAction" parent="baseAction" scope="prototype">
+    	<property name="operateManager" ref="operateManager"/>
+    	<property name="passwordEncoder" ref="passwordEncoder"/>
+    </bean>
+        
+   	<!-- 角色管理模块 -->
+   	<bean id="roleListAction" class="com.gmcc.webapp.action.sys.RoleListAction" parent="baseAction" scope="prototype">
+   		<property name="treeService" ref="treeService"/>
+   		<property name="roleSerivce" ref="roleSerivce"/>
+   	</bean>       
+    <bean id="roleDataAction" class="com.gmcc.webapp.action.sys.RoleDataAction" parent="baseAction" scope="prototype">
+    	<property name="authorityManager" ref="authorityManager"/>
+    	<property name="operateManager" ref="operateManager"/>
+    	<property name="treeService" ref="treeService"/>
+    </bean>
+    
+    <!-- 角色优化模块 -->
+    
+       	<bean id="roleMenuListAction" class="com.gmcc.webapp.action.sys.RoleMenuListAction" parent="baseAction" scope="prototype">
+   		<property name="treeService" ref="treeService"/>
+   		<property name="roleSerivce" ref="roleSerivce"/>
+      	</bean>   
+   	<!-- 菜单管理模块 -->
+    <bean id="menuDisplayAction" class="com.gmcc.webapp.action.sys.MenuDisplayAction" scope="prototype">
+    	 <property name="authorityManager" ref="authorityManager"/>
+    	 <property name="cacheManager" ref="authorityManager"/>
+    	 
+    </bean>
+    <bean id="appframeAction" class="com.gmcc.webapp.action.sys.AppFrameAction" scope="prototype">
+    	 <property name="authorityManager" ref="authorityManager"/>
+    	 <property name="cacheManager" ref="authorityManager"/>
+    	 <property name="businessLogOperateManager" ref="businessLogOperateManager"/>
+    </bean>
+    <bean id="appfilterAction" class="com.gmcc.webapp.action.sys.AppFilterAction" scope="prototype">
+    	 <property name="authorityManager" ref="authorityManager"/>
+    	 <property name="cacheManager" ref="authorityManager"/>
+    	 
+    </bean>
+    
+   	<!-- 数据字典管理模块 -->
+   	<bean id="elementGroupListAction" class="com.gmcc.webapp.action.sys.ElementGroupListAction" parent="baseAction" scope="prototype">
+   		<property name="eleManager" ref="eleManager"/>
+    </bean>
+    <bean id="elementGroupDataAction" class="com.gmcc.webapp.action.sys.ElementGroupDataAction" parent="baseAction" scope="prototype">
+        <property name="elementGroupManager" ref="elementOperateManagerImp"></property>
+        <property name="eleManager" ref="eleManager"/>
+    </bean>
+    <bean id="elementListAction" class="com.gmcc.webapp.action.sys.ElementListAction" parent="baseAction" scope="prototype">
+   		
+    </bean>
+    <bean id="elementDataAction" class="com.gmcc.webapp.action.sys.ElementDataAction" parent="baseAction" scope="prototype">
+    	<property name="eleGroupOperateManager" ref="elementOperateManagerImp"></property>
+    	<property name="elementManager" ref="elementOperateManagerImp"/>
+    	<property name="eleManager" ref="eleManager"/>
+    </bean>
+   	<bean id="businessLogListAction" class="com.gmcc.webapp.action.sys.BusinessLogListAction" scope="prototype">
+        <property name="queryManager" ref="queryManager"/>
+        <property name="cacheManager" ref="authorityManager"/>
+         <property name="logService" ref="logService"/>
+    </bean>
+    
+    <!-- 组织机构 -->
+	<bean id="hrCompanyListAction" class="com.gmcc.webapp.action.sys.HrCompanyListAction" parent="baseAction" scope="prototype">
+		<property name="treeService" ref="treeService"/>
+	</bean>
+	<bean id="hrCompanyDataAction" class="com.gmcc.webapp.action.sys.HrCompanyDataAction" parent="baseAction" scope="prototype">
+		<property name="treeService" ref="treeService"/>
+		<property name="hrCompanyService" ref="hrCompanyService"/>
+	</bean>
+    <!-- 仓储日志 -->
+    <bean id="storeLogListAction" class="com.gmcc.webapp.action.sys.StoreLogListAction" parent="baseAction" scope="prototype">
+		<property name="logService" ref="logService"/>
+	</bean>
+	<!-- 通告 -->
+	<bean id="verNoticeActSpr" class="com.gmcc.webapp.action.sys.VersionnoticeAction" parent="baseAction" scope="prototype">
+		<property name="verNotiService" ref="verNotiService" />
+	</bean>
+	<!-- 通告 -->
+	
+	
+	<bean id="systemManageAction" class="com.gmcc.webapp.action.sys.SystemManageAction"  scope="prototype" autowire="byName"/>
+  
+	
+	 <!-- 文件下载处理  -->
+	<bean id="downloadAction" class="com.gmcc.webapp.action.sys.DownloadAction"
+		abstract="false" lazy-init="default" autowire="byName"
+		dependency-check="default">
+	</bean>
+	<!-- excel文件处理 -->
+		<bean id="userExcelProcessAction" class="com.gmcc.webapp.action.sys.UserExcelProcessAction" parent="baseAction" scope="prototype">
+		 <property name="passwordEncoder" ref="passwordEncoder"/>
+        <property name="authorityManager" ref="authorityManager"/>
+        <property name="operateManager" ref="operateManager"/>
+	</bean>
+</beans>
+
+

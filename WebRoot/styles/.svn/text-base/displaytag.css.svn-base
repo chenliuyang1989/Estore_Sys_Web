@@ -1,0 +1,144 @@
+@import url(alternative.css);
+
+thead tr {
+	background-color: #fc0;/*#0099CC*/
+}
+
+th.sorted {	
+    background-color: #ffd;
+    color: #000000;
+}
+
+th a,th a:visited {
+	color: black;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+}
+
+th.sortable a {
+	background-image: url(../images/arrow_off.png)  !important;
+	background-repeat: no-repeat;
+}
+
+th.order1 a {
+	background-image: url(../images/arrow_down.png) !important;
+	background-repeat: no-repeat;
+}
+
+th.order2 a {
+	background-image: url(../images/arrow_up.png) !importants;
+	background-repeat: no-repeat;
+}
+
+tr.odd {
+	background-color: #fff
+}
+
+tr.tableRowEven,tr.even {
+	background-color: #fea
+}
+
+div.exportlinks {
+	background: url("../img/ListBottomBg.png") repeat-x scroll center center transparent;
+    border: 1px solid #bfbfbd;
+    padding: 5px 4px 5px 10px;
+}
+div.exportlinks a {
+
+}
+
+div.exportlinks span {
+    background-repeat: no-repeat;
+    
+}
+span.export {
+	padding: 0 4px 1px 20px;
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+
+span.excel {
+	background-image: url(../images/ico_file_excel.png);
+}
+
+span.csv {
+	background-image: url(../images/ico_file_csv.png);
+}
+
+span.xml {
+	background-image: url(../images/ico_file_xml.png);
+}
+
+span.pdf {
+	background-image: url(../images/ico_file_pdf.png);
+}
+
+span.rtf {
+	background-image: url(../images/ico_file_rtf.png);
+}
+
+span.pagebanner {
+	float:left;
+    margin-top: 2px;
+	padding:4px;
+	margin-bottom: 0px;
+	text-align: left;
+	 color: #333333;
+}
+
+span.pagelinks {
+	background-color: #F8F8F9;
+	padding:4px;
+	 float: left;
+	margin-top:2px;
+	margin-bottom: 0px;
+	 color: #838383
+}
+span.pagelinks a{
+	color:#006CFF;
+      text-decoration:underline;
+      }
+span.pagelinks a:hover{
+	text-decoration:none;
+}
+.group-1 {
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+.group-2 {
+    font-style:italic;
+    border-top: 1px solid black;
+
+}
+.subtotal-sum, .grandtotal-sum {
+    font-weight:bold;
+    text-align:right;
+}
+.subtotal-header {
+    padding-bottom: 0px;
+    border-top: 1px solid white;
+}
+.subtotal-label, .grandtotal-label {
+    border-top: 1px solid white;
+    font-weight: bold;
+}
+.grouped-table tr.even {
+    background-color: #fff;
+}
+.grouped-table tr.odd {
+    background-color: #fff;
+}
+.grandtotal-row {
+    border-top: 2px solid black;
+}

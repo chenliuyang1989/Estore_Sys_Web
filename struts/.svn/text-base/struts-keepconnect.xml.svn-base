@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>   
+    
+    <package name="keepConnect" extends="default" namespace="/keepConnect">      
+    	<action name="keepConnect"
+			class="com.gmcc.webapp.action.sys.KeepConnectAction" >
+		</action> 
+    </package>
+</struts>

@@ -1,0 +1,549 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+
+/* TYPOGRAPHY */
+    body {
+        text-align: left;
+        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+        font-size: 76%;
+        line-height: 1em;
+        color: #333;
+        margin: 0,auto;
+    }
+    div { 
+        font-size: 1em;
+    }
+        div#header a {
+           color: black;
+        }
+    img {
+        border: 0;
+    }
+    
+/* TESTFIELD STYLE */
+	.grayBg{background:#ececec}
+	.blueBorder{background:#FFFFFF url(img/icon1.gif) right center no-repeat; border:1px solid #abc3cb;}
+
+/* LINKS */
+    a,
+    a:link
+    a:active {
+        text-decoration: none;
+        color: #004d7d;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: #0026ca;
+    }
+        a img {
+            border: 0;
+        }
+/* END LINKS */
+
+/* HEADINGS */
+    h1 {
+        font-size: 2em;
+        line-height: 1.5em;
+        margin: 0 0 0.5em 0;
+        padding: 0;
+        color: black;
+    }
+    h2 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        margin: 0 0 0.5em 0;
+        padding: 0;
+        color: black;
+    }
+    h3 {
+        font-size: 1.3em;
+        line-height: 1.3em;
+        margin: 0;
+        padding:0;
+        color: black;
+    }
+    h4 {
+        font-size: 1.2em;
+        line-height: 1.3em;
+        margin: 0 0 0.25em 0;
+        padding: 0;
+        color: black;
+    }
+    h5 {
+        font-size: 1.1em;
+        line-height: 1.3em;
+        margin: 0 0 0.25em 0;
+        padding: 0;
+        color: black;
+    }
+    h6 {
+        font-size: 1em;
+        line-height: 1.3em;
+        margin: 0 0 0.25em 0;
+        padding: 0;
+        color: black;
+    }
+/* END HEADINGS */
+
+/* TEXT */
+    p {
+        font-size: 1em;
+        margin: 0 0 10px 0;
+        padding: 0;
+        line-height: 1.6em;
+    }
+    blockquote {
+        border-left: 10px solid #ddd;
+        margin-left: 10px;
+    }
+    pre {
+        font-family: monospace;
+        font-size: 12px;
+    }
+    strong, b {
+        font-weight: bold;
+    }
+    em, i {
+        font-style:italic;
+    }
+    code {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 12px;
+        white-space: pre;
+    }
+/* END TEXT */
+
+/* LISTS */
+    ul {
+        line-height:1.4em;
+        margin: 0 0 1.5em 0;
+        padding: 0;
+    }
+        ul.glassList {
+            list-style: url(../../images/aquadot.jpg) disc outside;
+            vertical-align: top;
+            line-height: 1.5em;
+        }
+    ul li {
+        margin: 0 0 0.25em 30px;
+        padding: 0;
+    }
+    ol {
+        font-size: 1.0em;
+        line-height: 1.4em;
+        margin: 0 0 1.5em 0;
+        padding: 0;
+    }
+    ol li {
+        font-size: 1.0em;
+        margin: 0 0 0.25em 30px;
+        padding: 0;
+    }
+    dl {
+        margin: 0 0 1.5em 0;
+        padding: 0;
+        line-height: 1.4em;
+    }
+    dl dt {
+        font-weight: bold;
+        margin: 0.25em 0 0.25em 0;
+        padding: 0;
+    }
+    dl dd {
+        margin: 0 0 0 30px;
+        padding: 0;
+    }
+/* END LISTS */
+
+
+/* TABLE */
+    table {
+        font-size: 1em;
+        margin: 0 0 0 0;
+        padding: 0;
+    }
+    table caption {
+        font-weight: bold;
+        margin: 0 0 0 0;
+        padding: 0 0 1.5em 0;
+    }
+    th {
+        font-weight: bold;
+        text-align: left;
+    }
+    td {
+        font-size:13px;
+    }
+
+    /*
+    Coffee with milk
+    Table design by Roger Johansson, 456 Berea Street
+    www.456bereastreet.com
+    ================================================*/
+        .table {
+            font: normal "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 0 0 1em;
+            color: #000;
+            width: 100%;
+        }
+            .table a {
+                color: #523A0B !important;
+                text-decoration: none;
+                border-bottom: 1px dotted;
+            }
+            .table td a img {
+                border: 0 !important;
+            }
+            .table a:visited {
+                color: #444;
+            }
+            .table th a {
+                border-bottom: 0;
+            }
+            .table td a:visited:after {
+                content: "\00A0\221A";
+            }
+            .contribTable th a:visited:after, .tableHeaderTable td a:visited:after {
+                content: "";
+            }
+            .table a:hover {
+                border-bottom-style: solid;
+                text-decoration: none;
+            }
+            .table th a:hover {
+                text-decoration: underline;
+            }
+            .table thead tr {
+    			background: transparent url("images/table_bg.jpg") repeat center bottom;
+    			height: 25px;
+			}
+
+            .table thead th, .table thead td,
+            .table tfoot th, .table tfoot td, .contribTable table.tableHeaderTable {
+                border: 1px solid #523A0B;
+                border-width: 1px 0;
+            }
+            .table th {
+                font-weight: bold;
+                line-height: normal;
+                padding: 0.25em 0.5em;
+                text-align: left;
+            }
+            .table tbody th, .table td {
+                padding: 0.25em 0.5em;
+                text-align: left;
+                vertical-align: top;
+            }
+            .table tbody th {
+                font-weight: normal;
+                white-space: nowrap;
+            }
+            .table tbody th a:link,
+            .table tbody th a:visited {
+                font-weight: bold;
+            }
+            .table tbody td,
+            .table tbody th {
+                border: 1px solid #fff;
+                border-width: 1px 0;
+            }
+            .table tbody tr.even th,
+            .table tbody tr.even td {
+                border-color: #EBE5D9;
+                background: #def /* #ced7f7;*/
+            }
+            .table tbody tr:hover td, .table tr.over td,
+            .table tbody tr:hover th {
+                background: #ffffee !important;
+                border-color: #523A0B !important; /* important needed on both for IE */
+            }
+            /* Turn off highlighting row for Tapestry's heading */
+            .table tr:hover table.tableHeaderTable, .table tr:hover table.tableHeaderTable th,
+                .table tr:hover table.tableHeaderTable td {
+                background: #EBE5D9;
+            }
+            .table caption {
+                font-family: Georgia,Times,serif;
+                font-weight: normal;
+                font-size: 1.4em;
+                text-align: left;
+                margin: 0;
+                padding: 0.5em 0.25em;
+            }
+            /* For Tapestry's contribTable */
+            .table th table, .table th table td {
+                width: 100%;
+                border: 0;
+            }
+            .contribTable th {
+                padding: 0px !important;
+            }
+            .contribTable th .tableHeaderTable {
+                margin: 0px !important;
+                padding: 0;
+            }
+            .contribTable tr.even {
+                background: #fff !important;
+            }
+            .contribTable tr.odd {
+                background: #F7F4EE !important;
+            }
+/* END TABLE */
+
+    hr {
+        display: none;
+    }
+    div.hr {
+        height: 1px;
+        margin: 1.5em 10px;
+        border-bottom: 1px dotted black;
+    }
+
+/* MISC CLASSES */
+
+div.announce {
+    margin: 20px 0 10px 0;
+    padding: 10px;
+    width: 130px;
+    color: #505050;
+    background-color: #f4f4f4;
+}
+
+    div.announce p {
+        line-height: 1.2em;
+        padding-bottom: 10px;
+    }
+
+    div.announce h3 {
+        color: #505050;
+    }
+
+/* END TYPOGRAPHY */
+
+/* add by lihui 2009-12-03 */
+.tableBorder {
+	BORDER-RIGHT: #183789 1px solid; 
+	BORDER-TOP: #183789 1px solid; 
+	BORDER-LEFT: #183789 1px solid; 
+	BORDER-BOTTOM: #183789 1px solid; 
+	BACKGROUND-COLOR: #ffffff
+}	
+
+.table_query
+{
+color: #111111;
+text-align: left;
+vertical-align: middle;
+padding: 0px 0px 0px 0px;
+border-style: none;
+}
+
+.form_label 
+{ 
+    font-family: Arial, Verdana, Times New Roman;  
+    text-align: left; 
+    /*background-color: #48D3F5; /*#7EA5F1; /*#ced7f7;*/     
+	BACKGROUND:#D3EAFF; 
+    color: 333333; 
+    vertical-align: middle;
+    letter-spacing: 1px
+}
+
+.form_display1 
+{ 
+    font-family: Arial, Verdana, Times New Roman; 
+	font-size: 10pt; 
+	font-style: normal; 
+	font-weight: normal; 
+	font-variant: normal; 
+	color: 333333; 
+	text-decoration: none; 
+	background-color: #fff; 
+    text-align: left; 
+    vertical-align: middle;    
+}
+.form_label_vert 
+{ 
+    font-family: Arial, Verdana, Times New Roman;  
+    text-align: center; 
+    background-color: #d2ffd2; 
+    font-size: 9pt;  
+    font-weight: bold; 
+    color: 333333; 
+    vertical-align: middle;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.form_label1_left
+{ 
+    font-family: Arial, Verdana, Times New Roman;  
+    text-align: left; 
+    background-color: #d2ffd2; 
+    font-size: 9pt;  
+    font-weight: bold; 
+    color: 333333; 
+    vertical-align: middle;
+    letter-spacing: 1px
+}
+/* css for input lable */
+.input
+{ 
+	font-family: Arial, Verdana, Times New Roman; 
+	font-size: 10pt; 
+	font-style: normal;
+	font-weight: normal; 
+	font-variant: normal;
+	color: 333333; 
+	text-decoration: none
+}
+
+/* 标题*/
+.headerTitle {
+	CLEAR: left; 
+	PADDING-RIGHT: 0px; 
+	PADDING-LEFT: 0px; 
+	BACKGROUND: url(img/panel_back.png) repeat-x top left; /*#f2f9fd;*/ 
+	height: 30px;
+	FONT-SIZE: 13px; 
+	display:none;
+	/*border-bottom:1px solid #6B90DA;*/
+}
+.headerTitle H1 {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 13px; 
+	MARGIN: 0px; 
+	color:#ffffff;
+    line-height: 30px;
+	/*padding:6px 20px 5px 20px;
+	_padding:12px 20px 8px 20px;*/
+	text-align:center;
+	BACKGROUND: url(img/panel_txt_back.png) no-repeat top left;
+	float:left;
+	width:141px;
+	text-align:center;
+	height:30px;
+}
+.headerTitle span{
+	background: #7E8990;
+    padding-top: 10px;
+    height:26px;
+    width:1px;
+    padding-left:1px;
+	_display:inline-block;
+	_padding-left:0px;
+	_height:13px;
+}
+
+/* 导航位置*/
+.crumb {
+	CLEAR: both; 
+	BORDER-RIGHT: #b6e6fb 1px solid; 
+	BORDER-TOP: #b6e6fb 1px; 
+	BACKGROUND: url(strap_bg.gif) repeat-x; 
+	BORDER-LEFT: #b6e6fb 1px solid; 
+	WIDTH: 800px; 
+	LINE-HEIGHT: 26px; 
+	BORDER-BOTTOM: #b6e6fb 1px solid; 
+	HEIGHT: 26px
+	
+}
+.crumbleft {
+	FLOAT: left; MARGIN-LEFT: 5px
+}
+.viewbox .intro {
+	background:#FAFDFE none repeat scroll 0 0;
+	border:1px solid #DDDDDD;
+	color:#555555;
+	font-size:14px;
+	line-height:25px;
+	margin-top:8px;
+	padding:8px 16px;
+}
+
+td#leftTD {
+	width:380px;
+}
+td#leftTD, td#upsellTD, td#advTD {
+	border-right:1px solid #CDDDF4;
+	padding:0 36px;
+	text-align:left;
+	vertical-align:top;
+}
+
+td#leftTD p {
+	margin:5px 0 4px;
+}
+
+input.searchBox
+{	
+	background:transparent url(images/inputbg.png) no-repeat scroll 0 0;
+	border:1px solid #7AD2FF;
+    color: #333;;
+	display:block;
+	float:left;
+	padding:3px 0 1px 2px;
+}
+
+.macstyle div.tag_select{
+	display:block;
+	color:#000;
+	width:71px;
+	height:20px;
+	background:transparent url("images/mac-select.gif") no-repeat 0 -24px;
+	padding:0 10px;
+	line-height:20px;
+}
+.macstyle div.tag_select_hover{
+	display:block;
+	color:#000;
+	width:71px;
+	height:20px;
+	background:transparent url("images/mac-select.gif") no-repeat 0 0;
+	padding:0 10px;
+	line-height:20px;
+}
+.macstyle div.tag_select_open{
+	display:block;
+	color:#000;
+	width:71px;
+	height:20px;
+	background:transparent url("images/mac-select.gif") no-repeat 0 -48px;
+	padding:0 10px;
+	line-height:20px;
+}
+
+.macstyle ul.tag_options{
+	position:absolute;
+	margin:-4px 0 0;
+	list-style:none;
+	background:transparent url("images/mac-select.gif") no-repeat left bottom;
+	width:100px;
+	padding:0 0 5px;
+	margin:0;
+	width:71px;
+}
+.macstyle ul.tag_options li{
+	background:transparent url("images/mac-select.gif") repeat-y -91px 0;
+	display:block;
+	width:61px;
+	padding:0 0 0 10px;
+	height:20px;
+	text-decoration:none;
+	line-height:20px;
+	color:#000;
+}
+
+.macstyle ul.tag_options li.open_hover{
+	background:transparent url("images/mac-select.gif") no-repeat -162px 0;
+	color:#000
+}
+.macstyle ul.tag_options li.open_selected{
+	background:transparent url("images/mac-select.gif") no-repeat -162px -24px;
+	color:#fff
+}
+
+
+/* end */
+

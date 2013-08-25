@@ -1,0 +1,14 @@
+# This properties file is used to configure mail settings in 
+
+mail.default.from=iApp <mail.iapp@gmail.com>
+mail.debug=false
+
+mail.host=smtp.gmail.com
+mail.username=mail.iapp@gmail.com
+mail.password=ken102955
+
+mail.transport.protocol=smtps
+
+webservice.address=http://localhost:8080/blc/services
+kickoff.enable=true
+amount.expired.enable=false

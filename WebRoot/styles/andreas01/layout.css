@@ -1,0 +1,206 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+	/* andreas01 - an open source xhtml/css website layout by Andreas Viklund (http://andreasviklund.com). Made for OSWD.org, free to use as-is for any purpose as long as the proper credits are given for the original design work. For design assistance and support, contact me through my website or through http://oswd.org/email.phtml?user=Andreas
+
+Version: 1.0
+(July 25, 2005) */ /* SITE SPECIFIC LAYOUT */
+
+body {
+	padding:0px;
+	margin:0px; 
+	/*background:#f8f8f9;*/
+	overflow-x: hidden;
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR: #f5f9ff;
+	SCROLLBAR-SHADOW-COLOR: #828282;
+	SCROLLBAR-3DLIGHT-COLOR: #828282;
+	SCROLLBAR-ARROW-COLOR: #797979;
+	SCROLLBAR-TRACK-COLOR: #ffffff;
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff
+}
+div#blcpage{
+	margin: 0 auto;
+	width:100%;
+	border:1px solid #599CD4;	
+	clear: both;
+}
+
+div#page {
+	color: #303030;
+	margin: 0 auto;
+	width: 100%;
+}
+
+div#content {
+	margin: 0 auto 20px 0;
+	padding: 0;
+	text-align: left;
+}
+
+/* HEADER */
+ul, li{padding:0px; margin:0px; list-style:none;}
+#header{border:1px #78b0d3 solid; background:url(../../img/hearderBg.jpg);height:78px;}
+#header .right{position:absolute;right:1px;top:1px;margin:0px;height:78px;width:210px; z-index:1;}
+#header .left{position:absolute;left:1px;top:1px;background:url(../../img/hearderBgLeft.jpg) no-repeat; height:78px;width:1150px; z-index:2;}
+#header .left .logo{background:url(../../img/logo.gif) 5px center no-repeat; height:78px;width:248px;float:left;}
+#header .exit{background:url(../../img/btn_icon1.png) -84px 0px no-repeat;color:#5c9ffd;display:block;position:absolute;right:3px;top:2px; width:39px;height:27px;z-index:9;}
+/*#header .exit a{color:#5c9ffd;text-decoration: none;}*/
+/*#header .exit a:hover{color:#ffffff;text-decoration: underline;}*/
+#header .help{background:url(../../img/btn_icon1.png) -42px 0px no-repeat;color:#5c9ffd;display:block;position:absolute;right:44px;top:2px; width:40px;height:27px;z-index:9;}
+#header .changePasswd{background:url(../../img/btn_icon1.png) 0px 0px no-repeat;color:#5c9ffd;display:block;position:absolute;right:86px;top:2px; width:40px;height:27px;z-index:9;}
+#header .left ul{height:78px;float:left;}
+#header .left li{width:89px;height:78px;margin:auto; text-align:center; float:left;}
+#header .left li a{display:block;width:85px;height:78px;}
+#header .left .menu01{background:url(../../img/menu01.gif) no-repeat center center;}
+#header .left .menu01c{background:url(../../img/menu01c.gif) no-repeat center center;}
+#header .left .menu02{background:url(../../img/menu02.gif) no-repeat center center;}
+#header .left .menu02c{background:url(../../img/menu02c.gif) no-repeat center center;}
+#header .left .menu03{background:url(../../img/menu03.gif) no-repeat center center; width:98px;margin:0px;}
+#header .left .menu03c{background:url(../../img/menu03c.gif) no-repeat center center; width:98px;margin:0px;}
+#header .left .menu03 a, #header .left .menu03c a{width:94px;}
+#header .left .menu04{background:url(../../img/menu04.gif) no-repeat center center;}
+#header .left .menu04c{background:url(../../img/menu04c.gif) no-repeat center center;}
+#header .left .menu05{background:url(../../img/menu05.gif) no-repeat center center;}
+#header .left .menu05c{background:url(../../img/menu05c.gif) no-repeat center center;}
+#header .left .menu06{background:url(../../img/menu06.gif) no-repeat center center;}
+#header .left .menu06c{background:url(../../img/menu06c.gif) no-repeat center center;}
+#header .left .menu07{background:url(../../img/menu07.gif) no-repeat center center;}
+#header .left .menu07c{background:url(../../img/menu07c.gif) no-repeat center center;}
+#header .left .menu09{background:url(../../img/menu08.gif) no-repeat center center;}
+#header .left .menu09c{background:url(../../img/menu08c.gif) no-repeat center center;}
+#header .left .menu08{background:url(../../img/menu09.gif) no-repeat center center;}
+#header .left .menu08c{background:url(../../img/menu09c.gif) no-repeat center center;}
+#header .left .menu10{background:url(../../img/menu10.gif) no-repeat center center;}
+#header .left .menu10c{background:url(../../img/menu10c.gif) no-repeat center center;}
+/* END HEADER */ 
+
+/* CONTENT */
+
+div>div#content {
+	margin-left: 0px;
+}
+
+body#error #content {
+	margin-top: 20px;
+}
+
+/* MAIN */
+div#main {
+	border-left: 1px solid #f0f0f0;
+	border-right: 1px solid #f0f0f0;
+	padding: 0px 10px;
+	width: 90%;
+}
+
+div#main h1 {
+	font-size: 1.5em;
+	margin: -4px 0 0.4em 0;
+}
+
+div#main h2 {
+	font-size: 1.3em;
+	margin: 0 0 10px 0;
+}
+
+div#main img {
+	padding: 1px;
+	display: inline;
+	background: #cccccc;
+	border: 4px solid #f0f0f0;
+}
+
+/* END MAIN */ 
+
+/* SUB */
+div#sub {
+	
+}
+
+/* END SUB */ 
+
+/* END CONTENT */ 
+
+/* FOOTER */
+div#footer {
+	clear: both;
+	margin: 0 auto;
+	padding: 0;
+	border: 1px solid #78b0d3;
+	text-align: center;
+	background:url(../../img/footerBg2.jpg) repeat-x;
+	height: 32px;
+}
+div#footer .txt{
+	background:url(../../img/footerBg1.jpg) no-repeat left center;
+	text-algin:center;
+	font-size:13px;
+	color:#000;
+	 line-height:32px;
+	height:32px;
+	}
+div#footer a {
+	text-decoration: none;
+}
+
+div#footer a:hover {
+	text-decoration: underline;
+	background:none;
+}
+
+
+/* END FOOTER */
+
+ /* toggleMene */
+div#toggleMenu {
+	background:url(../../img/toggleMenuBg.jpg) right top;
+	margin: 0px;
+	padding: 0px;
+}
+.hr1{height:1px;background:#04305a;width:100%;}
+/* end toggleMene */
+.loginStyle{
+        	background-attachment:scroll;
+        	background-image:none;
+        	background-position:0 0;
+        	background-repeat:repeat;
+        	margin: 0,auto;
+        }
+div#loginPage {
+        margin: 0 auto;
+		width:970px;
+		border:1px solid  #599CD4;	
+		clear: both;
+		background: #ECF5FB url(images/login_bg.jpg) top center repeat;
+  }
+ /* MISC LAYOUT CLASSES */
+
+.left {
+	/*margin: 10px 10px 5px 0;*/
+	float: left;
+}
+
+.right {
+	margin: 10px 0 5px 10px;
+	float: right;
+}
+
+.textright {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.small {
+	font-size: 0.8em;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.hide {
+	display: none;
+}
+/* END MISC LAYOUT CLASSES */ 
+/* END LAYOUT */

@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:cxf="http://cxf.apache.org/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+            http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+            http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	<bean id="userWebService" class="com.gmcc.service.webservice.UserManagerImpl">
+		<property name="operateManager" ref="userOperateManagerImp" />
+	</bean>
+	<jaxws:endpoint id="userService" implementor="#userWebService"
+		address="/UserService" />
+
+	<bean id="webServiceClient" class="com.gmcc.service.webservice.IUserService"
+		factory-bean="clientFactory" factory-method="create" />
+
+	<bean id="clientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+		<property name="serviceClass" value="com.gmcc.service.webservice.IUserService" />
+		<property name="address" value="${webservice.address}/UserService" />
+		<property name="outInterceptors">
+			<list>
+				<bean class="org.apache.cxf.binding.soap.saaj.SAAJOutInterceptor" />
+				<ref bean="clientWSInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="serverWSInterceptor" class="com.gmcc.webapp.interceptor.WSServerInterceptor" />
+	<bean id="clientWSInterceptor" class="com.gmcc.webapp.interceptor.WSClientInterceptor" />
+</beans>

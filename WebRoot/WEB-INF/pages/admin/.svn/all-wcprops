@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/estore-common/!svn/ver/1839/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin
+END
+businessLogListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/estore-common/!svn/ver/993/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/businessLogListPage.jsp
+END
+storeLogListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/estore-common/!svn/ver/770/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/storeLogListPage.jsp
+END
+editNotice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/estore-common/!svn/ver/898/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/editNotice.jsp
+END
+hrCompanyDataPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/estore-common/!svn/ver/639/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/hrCompanyDataPage.jsp
+END
+noticeListOth.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/estore-common/!svn/ver/960/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/noticeListOth.jsp
+END
+roleDataPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/estore-common/!svn/ver/639/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/roleDataPage.jsp
+END
+bassAddUserListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/estore-common/!svn/ver/1606/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/bassAddUserListPage.jsp
+END
+hrCompanyListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/estore-common/!svn/ver/639/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/hrCompanyListPage.jsp
+END
+passwordDataPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/estore-common/!svn/ver/1188/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/passwordDataPage.jsp
+END
+systemManagePage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/estore-common/!svn/ver/1075/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/systemManagePage.jsp
+END
+addNotice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/estore-common/!svn/ver/898/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/addNotice.jsp
+END
+roleListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/estore-common/!svn/ver/639/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/roleListPage.jsp
+END
+elementGroupDataPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/estore-common/!svn/ver/639/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/elementGroupDataPage.jsp
+END
+elementGroupListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/estore-common/!svn/ver/639/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/elementGroupListPage.jsp
+END
+scrollNotice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/estore-common/!svn/ver/960/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/scrollNotice.jsp
+END
+userDataPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/estore-common/!svn/ver/1592/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/userDataPage.jsp
+END
+userListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/estore-common/!svn/ver/1593/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/userListPage.jsp
+END
+noticeList.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/estore-common/!svn/ver/960/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/noticeList.jsp
+END
+roleMenuListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/estore-common/!svn/ver/1839/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/roleMenuListPage.jsp
+END
+elementDataPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/estore-common/!svn/ver/653/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/elementDataPage.jsp
+END
+elementListPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/estore-common/!svn/ver/657/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/elementListPage.jsp
+END
+showNotice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/estore-common/!svn/ver/960/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/admin/showNotice.jsp
+END

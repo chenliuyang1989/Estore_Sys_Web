@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/estore-common/!svn/ver/2193/trunk/Estore_Sys_Web/struts
+END
+struts-keepconnect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/estore-common/!svn/ver/907/trunk/Estore_Sys_Web/struts/struts-keepconnect.xml
+END
+struts-sys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/estore-common/!svn/ver/1590/trunk/Estore_Sys_Web/struts/struts-sys.xml
+END
+applicationContext-struts-job.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/estore-common/!svn/ver/2193/trunk/Estore_Sys_Web/struts/applicationContext-struts-job.xml
+END
+struts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/estore-common/!svn/ver/906/trunk/Estore_Sys_Web/struts/struts.xml
+END
+applicationContext-struts-sys.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/estore-common/!svn/ver/1837/trunk/Estore_Sys_Web/struts/applicationContext-struts-sys.xml
+END
+struts-demo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/estore-common/!svn/ver/26/trunk/Estore_Sys_Web/struts/struts-demo.xml
+END
+applicationContext-struts-demo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/estore-common/!svn/ver/71/trunk/Estore_Sys_Web/struts/applicationContext-struts-demo.xml
+END
+struts-job.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/estore-common/!svn/ver/526/trunk/Estore_Sys_Web/struts/struts-job.xml
+END

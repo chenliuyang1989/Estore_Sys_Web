@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Constants -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.action.extension" value="do"/>
+    <constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.custom.i18n.resources" value="ApplicationResources"/>
+    <constant name="struts.multipart.maxSize" value="2097152"/>
+    <constant name="struts.ui.theme" value="css_xhtml"/>
+    <constant name="struts.codebehind.pathPrefix" value="/WEB-INF/pages/"/>
+    <constant name="struts.enable.SlashesInActionNames" value="true"/>
+    <constant name="struts.convention.action.disableScanning" value="true"/>
+    <constant name="locale.provider" value="org.displaytag.localization.I18nStrutsAdapter"/>
+    <!-- 开发时使用 -->
+    <constant name="struts.devMode" value="false"/><!-- 报错时出现更详细的信息 -->
+    <constant name="struts.configuration.xml.reload" value="true"/><!--改动struts.xml时不用重启-->
+    <constant name="struts.il8n.reload" value="true"/> <!--改动国际化文件时不用重启-->
+    <constant name="struts.serve.static.browserCache" value="false"/><!--  浏览器是否缓存静态页面 -->
+
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <interceptors>
+            <interceptor name="logInterceptor" class="logInterceptor"/>
+            <interceptor name="authoriztitionOnly" class="authoriztitionInterceptor"/>
+            <interceptor name="exceptionInterceptor" class="exceptionInterceptor"/>
+            <!-- Copied from struts-default.xml and changed validation exclude methods -->
+            <interceptor-stack name="defaultStack">
+                <interceptor-ref name="exceptionInterceptor">
+                  <param name="logEnabled">true</param>
+                  <param name="logCategory">com.gmcc.webapp.action</param>
+                  <param name="logLevel">WARN</param>
+                </interceptor-ref>
+                <interceptor-ref name="alias"/>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="i18n"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="debugging"/>
+                <interceptor-ref name="profiling"/>
+                <interceptor-ref name="scopedModelDriven"/>
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="staticParams"/>
+                <interceptor-ref name="params">
+                    <param name="excludeParams">dojo\..*</param>
+                </interceptor-ref>
+                <interceptor-ref name="conversionError"/>
+                <interceptor-ref name="validation">
+                    <param name="excludeMethods">cancel,execute,delete,edit,list,back,load,loadList,loadData,loadByTask,backToList,deleteBody,agree,reject</param>
+                </interceptor-ref>
+                <interceptor-ref name="workflow">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+                <interceptor-ref name="logInterceptor"/>
+                <interceptor-ref name="authoriztitionOnly"/>
+            </interceptor-stack>
+            <interceptor-stack name="fileUploadStack">
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+		<!--  
+        <global-exception-mappings>
+            <exception-mapping exception="org.springframework.dao.DataAccessException" result="dataAccessFailure"/>
+        </global-exception-mappings>
+        -->
+        <global-results>
+            <result name="ajaxresult">/WEB-INF/pages/ajaxresult.jsp</result>
+        </global-results>
+
+        <!-- Add additional actions here -->
+    </package>
+
+    <include file="struts-sys.xml"/>
+    <include file="struts-job.xml"/>
+    <include file="struts-demo.xml"/>   
+    <include file="struts-keepconnect.xml" />
+</struts>

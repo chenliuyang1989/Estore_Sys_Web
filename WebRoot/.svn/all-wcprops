@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/estore-common/!svn/ver/2372/trunk/Estore_Sys_Web/WebRoot
+END
+403.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/estore-common/!svn/ver/11/trunk/Estore_Sys_Web/WebRoot/403.jsp
+END
+404.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/estore-common/!svn/ver/647/trunk/Estore_Sys_Web/WebRoot/404.jsp
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/estore-common/!svn/ver/1188/trunk/Estore_Sys_Web/WebRoot/login.jsp
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/estore-common/!svn/ver/270/trunk/Estore_Sys_Web/WebRoot/error.jsp
+END
+logout.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/estore-common/!svn/ver/1377/trunk/Estore_Sys_Web/WebRoot/logout.jsp
+END
+helloworld.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/estore-common/!svn/ver/2372/trunk/Estore_Sys_Web/WebRoot/helloworld.jsp
+END

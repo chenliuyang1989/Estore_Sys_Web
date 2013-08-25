@@ -1,0 +1,183 @@
+/* alternative styles */
+table.its {
+	 font: normal "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+            border-collapse: separate;
+            border-spacing: 0;
+            color: #000;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1em;
+            clear:both;
+}
+table.its a{
+	color: #006cff !important;
+                text-decoration: underline;
+                border-bottom: 0px dotted;	
+	
+}
+table.its th a {
+	color:#FFF !important;
+	text-decoration: none;
+	border:0px;
+}
+table.its a:hover {
+                border-bottom-style: solid;
+                text-decoration: none;
+            }
+table.its th a:hover {
+                text-decoration: none;
+            }
+table.its thead tr {
+    background: transparent url("andreas01/img/table_bg.jpg") repeat center bottom;
+    height: 25px;
+}
+ table.its thead th, .table thead td,
+            .table tfoot th, .table tfoot td, .contribTable table.tableHeaderTable {
+                border: 1px solid #83b6c7;
+                border-width: 1px 0;
+				background:transparent url("andreas01/img/table_bg.jpg") repeat center bottom;
+            }
+table.its thead th,table.its thead th a{color:#FFF; font-weight: normal;}
+table.its tr.even {
+	background-color: #f5f9fe;
+	
+}
+table.its th {
+                font-weight: bold;
+                line-height: normal;
+                padding: 0.25em 0.5em;
+                text-align: left;
+            }
+table.its tbody th, table.its td {
+                padding:3px 6px 4px 6px;
+                text-align: left;
+                vertical-align: top;
+
+            }
+          
+            table.its tbody th {
+                font-weight: normal;
+                white-space: nowrap;
+            }
+            table.its tbody th a:link,
+            table.its tbody th a:visited {
+                font-weight: bold;
+            }
+            table.its tbody td,
+            table.its tbody th {
+
+            }
+            table.its tbody tr.even th,
+            table.its tbody tr.even td {
+                border-color: #f5f9fe;
+                background: #f5f9fe;
+
+            }
+            table.its tbody tr:hover td, table.its tr.over td,
+            table.its tbody tr:hover th {
+                background:url(../img/tdHoverBg.png) center center repeat-x  ; !important;
+ 
+            }
+            /* Turn off highlighting row for Tapestry's heading */
+            table.its tr:hover table.tableHeaderTable, table.its tr:hover table.tableHeaderTable th,
+                table.its tr:hover table.tableHeaderTable td {
+                background: #EBE5D9;
+            }
+            table.its caption {
+                font-family: Georgia,Times,serif;
+                font-weight: normal;
+                font-size: 1.4em;
+                text-align: left;
+                margin: 0;
+                padding: 0.5em 0.25em;
+            }
+            /* For Tapestry's contribTable */
+            table.its th table, table.its th table td {
+                width: 100%;
+                border: 0;
+            }
+/* highlight .table row onmouseover */
+table.its tr.over {
+    border-bottom: 1px solid #C0C0C0;
+    border-top: 1px solid #C0C0C0;
+    color: #000000;
+    cursor: pointer;
+}            
+            
+            /* end of its*/
+table.mars thead tr {
+	background-color: #9c9;
+}
+
+table.mars tr.even {
+	background-color: #ccb;
+}
+
+table.mars tr.odd {
+	background-color: #eec;
+}
+
+table.simple thead tr th {
+	background-color: #eee;
+}
+
+table.simple tr.even {
+	background-color: #fff;
+}
+
+table.simple {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+}
+
+table.simple td,table.simple th {
+	border: 1px solid #ccc;
+}
+
+table.nocol tbody td,table.nocol tbody th {
+	border-left: none;
+	border-right: none;
+}
+
+table.report td,table.report th {
+	font: menu;
+}
+
+table.report th {
+	background: buttonface;
+	border-width: 1px;
+	border-style: solid;
+	border-color: threedhighlight threedshadow threedshadow threedhighlight;
+	cursor: hand;
+}
+
+table.report idcol {
+	background: buttonface;
+}
+
+table.report tr.even {
+	background-color: #399;
+}
+
+table.report tbody {
+	height: 100px;
+	overflow: auto;
+}
+
+table.report {
+	height: 120px;
+	overflow: auto;
+}
+
+table.report tbody tr {
+	height: 10px;
+}
+
+table.mark td.tableCellError {
+	background-color: #d00;
+	color: #fff;
+}
+
+table.simple td.textRed {
+	color: #b11;
+}

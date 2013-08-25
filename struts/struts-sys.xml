@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 菜单框架 -->
+    <package name="system" extends="default" namespace="/system">
+        <action name="index" class="appframeAction">
+            <result name="success">/WEB-INF/pages/system/frame.jsp</result>
+            <result name="faild">/login.jsp</result>
+            <result name="logout">/logout.jsp?defalutUser=${#request.userName}&amp;phoneCheck=${#request.phoneCheck}</result>
+        </action>
+  		<action name="menuDisplay" class="menuDisplayAction">
+            <result name="success">/WEB-INF/pages/system/menu.jsp</result>
+        </action>
+        <action name="toggleMenu">
+            <result name="success">/WEB-INF/pages/system/toggleMenu.jsp</result>
+        </action>
+        <action name="header" class="appfilterAction">
+            <result name="success">/WEB-INF/pages/system/header.jsp</result>
+        </action>
+        <action name="footer">
+            <result name="success">/WEB-INF/pages/system/footer.jsp</result>
+        </action>
+        <action name="main">
+            <result name="success">/WEB-INF/pages/system/main.jsp</result>
+        </action>
+        
+      
+        
+
+        
+         <action name="downloadAction" class="downloadAction">
+				<result name="success" type="stream">
+					<param name="inputName">uploadFiles</param>
+					<param name="contentDisposition">
+						attachment;filename="${fileName}"
+					</param>
+				</result>
+		</action>
+        
+    </package>	
+    
+    <!-- 资源模块 -->
+    <package name="ajaxData" extends="json-default">
+		<action name="findUserNames"
+			class="com.ibm.ebapp.action.base.AjaxDataAction" method="findUserNames">
+			<result type="json">
+				<param name="root">list</param>
+			</result>
+		</action>
+		<action name="findElement"
+			class="com.gmcc.webapp.action.base.AjaxDataAction" method="findElementByGroup">
+			<result type="json">
+				<param name="root">list</param>
+			</result>
+		</action>
+	</package>
+    
+	<!-- 系统管理模块 -->
+    <package name="user" extends="default" namespace="/admin">             
+        <action name="*ListAction" class="{1}ListAction">
+            <result name="success">/WEB-INF/pages/admin/{1}ListPage.jsp</result>
+            <result name="add" type="chain" >{1}DataAction</result>
+            <result name="bassAdd" >/WEB-INF/pages/admin/bassAddUserListPage.jsp</result>
+        </action>  
+        <action name="*DataAction" class="{1}DataAction" method="load">
+            <result name="input">/WEB-INF/pages/admin/{1}DataPage.jsp</result>    
+            <result name="success">/WEB-INF/pages/admin/{1}DataPage.jsp</result>
+            <result name="list" type="chain" >{1}ListAction</result>
+        </action>   
+        <action name="verNoticeAct" class="verNoticeActSpr">
+        	<result name="saveVersionnotice">/WEB-INF/pages/admin/addNotice.jsp</result>
+        	<result name="findVersionnotices">/WEB-INF/pages/admin/noticeList.jsp</result>
+        	<result name="findVerNotice">/WEB-INF/pages/admin/editNotice.jsp</result>
+        	<result name="findScrollNotice">/WEB-INF/pages/admin/scrollNotice.jsp</result>
+        	<result name="findVerNoticeShow">/WEB-INF/pages/admin/showNotice.jsp</result>
+			<result name="findNotices">/WEB-INF/pages/admin/noticeListOth.jsp</result>
+        </action>     
+         <!-- 通过文件导入的方式批量增加用户 -->
+         <action name="userExcelProcessAction" class="userExcelProcessAction">
+				<result name="success" type="stream">
+					<param name="inputName">uploadFiles</param>
+					<param name="contentDisposition">
+						attachment;filename="file.xls"
+					</param>
+				</result>
+               <result name="input" >/WEB-INF/pages/admin/bassAddUserListPage.jsp</result>
+ 		</action>
+        
+         <action name="systemManage" class="systemManageAction" >
+            <result name="success">/WEB-INF/pages/admin/systemManagePage.jsp</result>
+      
+        </action>
+    </package>
+    
+</struts>

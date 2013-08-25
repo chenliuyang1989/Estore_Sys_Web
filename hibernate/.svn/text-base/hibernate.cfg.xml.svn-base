@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="com.gmcc.model.Authority" />
+		<mapping class="com.gmcc.model.BusinessLog" />
+		<mapping class="com.gmcc.model.Element" />
+		<mapping class="com.gmcc.model.ElementGroup" />
+		<mapping class="com.gmcc.model.Role" />
+		<mapping class="com.gmcc.model.User" />
+		<mapping class="com.gmcc.model.HrCompany" />
+		<mapping class="com.gmcc.model.BillSn" />
+		<mapping class="com.gmcc.model.Params" />
+		<mapping class="com.gmcc.model.JobConfig" />
+		<mapping class="com.gmcc.model.JobLog" />
+		<mapping class="com.gmcc.model.DemoBill" />
+		<mapping class="com.gmcc.model.DemoBillDetail" />
+		<mapping class="com.gmcc.model.Versionnotice" />
+		<mapping class="com.gmcc.model.SMSSendQueue" />
+	</session-factory>
+</hibernate-configuration>

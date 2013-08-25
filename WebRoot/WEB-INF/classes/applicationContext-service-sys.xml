@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+       default-lazy-init="true">
+
+    <bean id="userSecurityAdvice" class="com.gmcc.service.UserSecurityAdvice"/>
+    
+    <!-- 调度服务实例 --> 
+    <bean id="jobService" class="com.gmcc.service.impl.job.JobServiceImpl">
+    	<property name="jobManager" ref="jobManager"/>
+        <property name="genericDao" ref="genericDao"/> 
+        <property name="jobLogOperate" ref="operateManager"/>
+        <property name="jobDAO" ref="jobDAO"/>
+    </bean>
+	<bean id="jobManager" class="com.gmcc.service.jobmanager.JobManager" lazy-init="false">
+		<property name="jobService" ref="jobService"/>
+	</bean>
+    
+    <!-- 权限(供struts拦截器使用)-->
+    <bean id="authoriztitionInterceptor" class="com.gmcc.webapp.interceptor.UserRoleAuthorizationInterceptor">
+   			<property name="authorityManager" ref="authorityManager"/>
+   			<property name="enabledKickOff" value="false"/>
+    </bean>
+    
+    <!-- 日志拦截 -->
+    <bean id="logAdvice" class="com.gmcc.log.LogAdvice"/>
+    <bean id="logInterceptor" class="com.gmcc.log.LogInterceptor"> 
+     	<property name="businessLogOperateManager" ref="businessLogOperateManager"/>
+    </bean>
+    
+    <!-- 菜单加载服务 -->
+	<bean id="authorityManager" class="com.gmcc.service.impl.AuthorityManagerImpl">
+          <constructor-arg ref="authorityDAO"/>
+          <property name="userDAO" ref="userDAO"/>
+    </bean>
+     
+    <!-- 角色(模板)服务 -->
+    <bean id="roleOperateManagerImp" class="com.ibm.service.impl.OperateManagerImp"  > 
+         <property name="genericDao"  ref="roleGenericDao"/>
+    </bean>
+    <bean id="userOperateManagerImp" class="com.ibm.service.impl.OperateManagerImp"  > 
+         <property name="genericDao"  ref="userGDao"/>
+    </bean>
+  
+    <!-- 数据字典服务 -->
+    <bean id="elementOperateManagerImp" class="com.ibm.service.impl.OperateManagerImp"> 
+         <property name="genericDao"  ref="genericDao"/>
+    </bean>
+    
+    <bean id="eleManager" class="com.gmcc.service.impl.ElementManagerImpl"> 
+         <property name="eleGroupDao"  ref="genericDao"/>
+         <property name="elementDao"  ref="genericDao"/>
+    </bean>
+    
+    <!-- 业务日志 -->
+    <bean id="businessLogOperateManager" class="com.ibm.service.impl.OperateManagerImp"> 
+         <property name="genericDao"  ref="businessLogGenericDao"/>
+    </bean>
+    
+    <!-- 单据序列-->
+    <bean id="billSnManager" class="com.gmcc.service.impl.BillSnManagerImpl">
+    	 <property name="billSnDao"  ref="billSnDao"/>
+    	 <property name="snDAO"  ref="snDAO"/>
+    </bean>
+    
+    <!-- 系统参数-->
+    <bean id="paramsManager" class="com.gmcc.service.impl.ParamsManagerImpl">
+    	 <property name="paramsDao"  ref="paramsDao"/>
+    </bean>
+    
+    <!-- 树形service -->
+    <bean id="treeService" class="com.gmcc.service.impl.tree.TreeServiceImpl" >
+         <property name="treeDAO" ref="treeDAO"/>
+    </bean>
+    
+    <!-- 组织机构 -->
+    <bean id="hrCompanyService" class="com.gmcc.service.impl.hrcompany.HrCompanyServiceImpl">
+         <property name="billSnManager" ref="billSnManager"/>
+         <property name="genericDao" ref="genericDao"/> 
+          <property name="userDAO" ref="userDAO"/>
+          <property name="hrCompanyDAO" ref="hrCompanyDAO"/>
+    </bean>
+	<!-- 角色service -->
+    <bean id="roleSerivce" class="com.gmcc.service.impl.RoleServiceImpl" >
+         <property name="roleDAO" ref="roleDAO"/>
+    </bean>
+    <!-- 用户service -->
+    <bean id="userSysService" class="com.gmcc.service.impl.UserServiceImpl" >
+         <property name="roleDAO" ref="roleDAO"/>
+         <property name="genericDao" ref="genericDao"/> 
+    </bean>
+         <!-- 日志service -->
+    <bean id="logService" class="com.gmcc.service.impl.LogServiceImpl" >
+         <property name="logDAO" ref="logDAO"/>
+    </bean>
+   
+     <!-- 系统通告 -->
+    <bean id="verNotiService" class="com.gmcc.service.impl.VersionnoticeServiceImpl">
+    	<property name="operateManager" ref="operateManager" />
+    </bean>
+</beans>

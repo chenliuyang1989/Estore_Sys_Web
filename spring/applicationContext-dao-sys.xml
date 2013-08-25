@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-lazy-init="true">
+	
+	<!-- 角色泛型DAO -->
+	<bean id="roleGenericDao" parent="baseDao" />
+	
+	<!-- 用户泛型 -->
+	<bean id="userGDao" parent="baseDao"/>
+	
+	<!-- 业务日志DAO -->
+	<bean id="businessLogGenericDao" parent="baseDao" />
+
+	<!-- 用户授权DAO -->
+	<bean id="authorityDAO" class="com.gmcc.dao.hibernate.AuthorityDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 用户DAO -->
+	<bean id="userDAO" class="com.gmcc.dao.hibernate.UserDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 单据序列DAO -->
+    <bean id="billSnDao" parent="genericDao"/>
+    
+    <!-- 参数DAO -->
+    <bean id="paramsDao" parent="genericDao"/>
+    
+    <!-- 树形dao -->
+    <bean id="treeDAO" class="com.gmcc.dao.impl.tree.TreeDAOHibernate">
+    	<property name="sessionFactory" ref="sessionFactory" />  
+    </bean>
+     <!-- 组织机构dao -->
+    <bean id="hrCompanyDAO" class="com.gmcc.dao.hibernate.HrCompanyDAOHibernate" parent="baseDao">
+    </bean>
+      <!-- 角色dao -->
+    <bean id="roleDAO" class="com.gmcc.dao.hibernate.RoleDAOHibernate" parent="baseDao">
+    </bean>
+         <!-- 日志dao -->
+    <bean id="logDAO" class="com.gmcc.dao.hibernate.LogDAOHibernate" parent="baseDao">
+    </bean>
+     <!-- 单据序列-->
+    <bean id="snDAO" class="com.gmcc.dao.hibernate.BillSnDAOHibernate" parent="baseDao">
+    </bean>
+    
+    <!-- 调度-->
+    <bean id="jobDAO" class="com.gmcc.dao.hibernate.JobDAOHibernate" parent="baseDao">
+    </bean>
+</beans>

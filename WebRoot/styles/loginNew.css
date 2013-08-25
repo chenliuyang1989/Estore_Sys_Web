@@ -1,0 +1,97 @@
+/* CSS Document */
+body {
+	background:#1073c2 url(../img/loginBg.jpg) left top repeat-x;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+ul, li{padding:0px; margin:0px; list-style:none;}
+.divLogin{
+background:url(../img/loginImg.jpg) left -2px no-repeat;
+margin:0px auto;
+width:868px;
+height:600px;
+position:relative;
+}
+.divLogin .loginArea{
+position:absolute;
+top:220px;
+right:116px;
+width:220px;
+height:192px;
+}
+.divLogin .loginArea ul{
+width:100%;
+}
+.divLogin .loginArea li{
+text-align:left;
+padding:0px;
+font-size:13px;
+font-weight:bold;
+color:#676767;
+}
+.text{
+border:1px solid #a3b3c1;
+background:#FFF;
+color:#00052e;
+font-size:13px;
+padding:0px;
+height:16px;
+width:200px;
+margin-bottom:4px;
+}
+.button{
+	background:url(../img/loginBtn01.jpg) no-repeat;
+	height:30px;
+	width:99px;
+	color:#FFF;
+	font-size:14px;
+	font-weight:bold;
+	border:0px;
+	letter-spacing:10px;
+}
+.label{
+vertical-align:middle;
+text-align:left;
+padding:1px;
+font-size:13px;
+font-weight:bold;
+color:#676767;
+}
+.button1{
+	background:url(../img/loginBtn01.jpg);
+	height:25px;
+	width:80px;
+	color:#FFF;
+	font-size:5px;
+	border:0px;
+	letter-spacing:0px;
+}
+.button2 {
+	float: right;
+	cursor: pointer; 
+	border:0px;
+	background:url(images/dialogTitleBg.gif) repeat-x;
+	height:25px;
+	width:80px;
+	color:#FFF;
+	font-size:12px;
+	letter-spacing:0px;
+}
+.divLogin .co{
+position:absolute;
+top:495px;
+left:234px;
+width:400px;
+text-align:center;
+margin:0px auto;
+color:#379dff;
+font-size:13px;
+}
+ .testSpan{text-align:right;width:90px;width:80px;}
+ .dialog_login{float:left;}
+.dialog_login td.td1{text-align:right;width: 90px;width: 80px;}
+.dialog_login td{text-align:left;height:28px; font-size: 13px;_font-size: 11px;}
+#saServiceUser_tem{width:130px; height:14px; padding:2px;}
+.dialog_login td span{margin-left:5px;}
+.dialog_login td span input{margin-right:3px;}

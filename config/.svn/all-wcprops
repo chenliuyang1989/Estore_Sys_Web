@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/estore-common/!svn/ver/2315/trunk/Estore_Sys_Web/config
+END
+applicationContext-resources.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/estore-common/!svn/ver/324/trunk/Estore_Sys_Web/config/applicationContext-resources.xml
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/estore-common/!svn/ver/672/trunk/Estore_Sys_Web/config/ehcache.xml
+END
+db.properties
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/estore-common/!svn/ver/17/trunk/Estore_Sys_Web/config/db.properties
+END
+applicationContext-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/estore-common/!svn/ver/104/trunk/Estore_Sys_Web/config/applicationContext-service.xml
+END
+security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/estore-common/!svn/ver/881/trunk/Estore_Sys_Web/config/security.xml
+END
+applicationContext-dao.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/estore-common/!svn/ver/104/trunk/Estore_Sys_Web/config/applicationContext-dao.xml
+END
+cssHorizontalMenu.vm
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/estore-common/!svn/ver/343/trunk/Estore_Sys_Web/config/cssHorizontalMenu.vm
+END
+cssVerticalMenu.vm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/estore-common/!svn/ver/17/trunk/Estore_Sys_Web/config/cssVerticalMenu.vm
+END
+xwork-conversion.properties
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/estore-common/!svn/ver/17/trunk/Estore_Sys_Web/config/xwork-conversion.properties
+END
+velocity.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/estore-common/!svn/ver/17/trunk/Estore_Sys_Web/config/velocity.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/estore-common/!svn/ver/646/trunk/Estore_Sys_Web/config/log4j.properties
+END
+displaytag_zh_CN.properties
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/estore-common/!svn/ver/2315/trunk/Estore_Sys_Web/config/displaytag_zh_CN.properties
+END
+mail.properties
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/estore-common/!svn/ver/17/trunk/Estore_Sys_Web/config/mail.properties
+END
+displaytag_en.properties
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/estore-common/!svn/ver/17/trunk/Estore_Sys_Web/config/displaytag_en.properties
+END

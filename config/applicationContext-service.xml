@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-lazy-init="true">
+
+    <!-- =================================================================== -->
+    <!-- AOP: Configuration and Aspects                                      -->
+    <!-- =================================================================== -->
+    <aop:config>
+        <aop:advisor id="userManagerTx" advice-ref="userManagerTxAdvice" pointcut="execution(* *..service.UserManager.*(..))" order="0"/>        
+        <aop:advisor id="userManagerSecurity" advice-ref="userSecurityAdvice" pointcut="execution(* *..service.UserManager.saveUser(..))" order="1"/>
+        <aop:advisor id="managerTx" advice-ref="txAdvice" pointcut="execution(* *..service.*Manager.*(..))" order="2"/>
+        <aop:advisor id="serviceTx" advice-ref="txAdvice" pointcut="execution(* *..service.*.*Service.*(..))" order="3"/>
+        <aop:advisor id="daoLogAudit" advice-ref="logAdvice" pointcut="execution(* *..dao.hibernate.base.*Dao.*(..))" order="4"/>
+        <aop:advisor id="serviceLogAudit" advice-ref="logAdvice" pointcut="execution(* *..service.*Manager.*(..))" order="5"/>
+    </aop:config>
+    
+    <!-- Enable @Transactional support -->
+    <tx:annotation-driven/>
+    
+    <!-- Enable @AspectJ support -->
+    <aop:aspectj-autoproxy/>
+
+    <!-- Enable @Configured support -->
+    <aop:spring-configured/>
+    
+    <tx:advice id="txAdvice">
+        <tx:attributes>
+            <!-- Read-only commented out to make things easier for end-users 
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>-->
+            <tx:method name="*" rollback-for="Exception"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <tx:advice id="userManagerTxAdvice">
+        <tx:attributes>
+            <tx:method name="save*" rollback-for="Exception"/>
+        </tx:attributes>
+    </tx:advice>
+    
+	<!-- 异常捕捉 -->
+    <bean id="exceptionInterceptor" class="com.ibm.webapp.interceptor.ExceptionMappingInterceptor"> 
+    </bean>
+     
+    <!-- 公共DAO查询操作 -->
+	<bean id="queryManager" class="com.ibm.service.impl.QueryManagerImp" scope="prototype">
+         <property name="genericDao"  ref="genericDao"/>
+		 <property name="pageSize"><value>${list.pageSize}</value></property>
+    </bean>
+    
+    <!-- 公共DAO增删改等操作 -->
+    <bean id="operateManager" class="com.ibm.service.impl.OperateManagerImp"> 
+         <property name="genericDao"  ref="genericDao"/>
+    </bean>
+    
+    <!-- 密码加密服务 -->
+    <bean id="passwordEncoder" class="org.springframework.security.providers.encoding.ShaPasswordEncoder"/>
+              
+    <!-- 邮件服务 -->
+	<bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage"
+		scope="prototype">
+		<property name="from" value="${mail.default.from}" />
+	</bean>
+	<bean id="mailEngine" class="com.ibm.util.mail.MailEngine">
+		<property name="mailSender" ref="mailSender" />
+		<property name="velocityEngine" ref="velocityEngine" />
+		<property name="from" value="${mail.default.from}" />
+	</bean>
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${mail.host}" />
+		<property name="defaultEncoding" value="UTF-8" />
+		<!-- Uncomment if you need to authenticate with your SMTP Server -->
+		<property name="username" value="${mail.username}"/>
+		<property name="password" value="${mail.password}"/>
+		<property name="javaMailProperties">
+			<props>
+	            <prop key="mail.smtp.auth">true</prop>
+	            <prop key="mail.smtp.port">465</prop>
+	            <prop key="mail.smtp.timeout">25000</prop>
+	            <prop key="mail.smtp.socketFactory.port">465</prop>
+            	<prop key="mail.smtp.socketFactory.fallback">false</prop>
+            	<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+        	</props>
+		</property>
+	</bean>	
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <props>
+                <prop key="resource.loader">class</prop>
+                <prop key="class.resource.loader.class">
+                    org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+                </prop>
+                <prop key="velocimacro.library"></prop>
+            </props>
+        </property>
+    </bean>
+       
+</beans>

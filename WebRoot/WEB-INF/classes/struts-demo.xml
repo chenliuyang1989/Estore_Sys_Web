@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+	<!-- DEMO模块 -->
+    <package name="demo" extends="default" namespace="/demo">       
+        <action name="*ListAction" class="{1}ListAction">
+            <result name="success">/WEB-INF/pages/demo/{1}ListPage.jsp</result>
+            <result name="add" type="chain" >{1}DataAction</result>
+        </action>
+        <action name="*DataAction" class="{1}DataAction" method="load">
+            <result name="input">/WEB-INF/pages/demo/{1}DataPage.jsp</result>
+            <result name="success">/WEB-INF/pages/demo/{1}DataPage.jsp</result>
+            <result name="list" type="chain" >{1}ListAction</result>
+        </action>
+    </package>
+    
+</struts>

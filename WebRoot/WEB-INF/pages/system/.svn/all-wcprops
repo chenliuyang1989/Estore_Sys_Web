@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/estore-common/!svn/ver/1956/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/system
+END
+main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/estore-common/!svn/ver/240/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/system/main.jsp
+END
+menu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/estore-common/!svn/ver/1956/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/system/menu.jsp
+END
+toggleMenu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/estore-common/!svn/ver/240/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/system/toggleMenu.jsp
+END
+header.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/estore-common/!svn/ver/994/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/system/header.jsp
+END
+frame.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/estore-common/!svn/ver/1011/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/system/frame.jsp
+END
+footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/estore-common/!svn/ver/974/trunk/Estore_Sys_Web/WebRoot/WEB-INF/pages/system/footer.jsp
+END

@@ -1,0 +1,151 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+.btn_add{
+	border:0px;
+	background:url(img/iconAdd.png) 0px 2px no-repeat;
+	padding-left:12px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_del{
+	border:0px;
+	background:url(img/iconDel.png) 0px 2px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_delAll{
+	border:0px;
+	background:url(img/iconDelAll.png) 0px 2px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_back{
+	border:0px;
+	background:url(img/iconBack.png) 0px 2px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_save{
+	border:0px;
+	background:url(img/iconSave.png) 0px 1px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_Set{
+	border:0px;
+	background:url(img/iconSet.png) 0px 1px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_next{
+	border:0px;
+	background:url(img/iconNext.gif) 0px 2px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_start{
+	border:0px;
+	background:url(img/iconStart.gif) 0px 2px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_close{
+	border:0px;
+	background:url(img/iconStop.gif) 0px 2px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_order{
+	border:0px;
+	background:url(img/iconOrder.gif) 0px 2px no-repeat;
+	padding-left:15px;
+	color:#294d95;
+	font-size:13px;
+}
+.btn_mouseout {
+	BORDER-RIGHT: #2C59AA 1px solid; 
+	PADDING-RIGHT: 2px; 
+	BORDER-TOP: #2C59AA 1px solid; 
+	PADDING-LEFT: 2px; 
+	FONT-SIZE: 12px; 
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+	BORDER-LEFT: #2C59AA 1px solid; 
+	CURSOR: hand;
+	COLOR: black; 
+	PADDING-TOP: 2px; 
+	BORDER-BOTTOM: #2C59AA 1px solid;
+	letter-spacing:1px;
+}
+/* clearing */
+    .stretch,
+    .clear {
+        clear:both;
+        height:1px;
+        margin:0;
+        padding:0;
+        font-size: 15px;
+        line-height: 1px;
+    }
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    * html>body .clearfix {
+        display: inline-block;
+        width: 100%;
+    }
+
+    * html .clearfix {
+        /* Hides from IE-mac \*/
+        height: 1%;
+        /* End hide from IE-mac */
+    }
+/* end clearing */
+
+
+/* replace */
+    .replace {
+        display:block;
+
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-color:transparent;
+    }
+    /* tidy these up */
+    .replace * {
+        text-indent: -10000px;
+        display:block;
+
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-color:transparent;
+    }
+    .replace a {
+        text-indent:0;
+    }
+    .replace a span {
+        text-indent:-10000px;
+    }
+/* end replace */
+
+
+/* accessibility */
+     span.accesskey {
+         text-decoration:none;
+     }
+     .accessibility {
+         position: absolute;
+         top: -999em;
+         left: -999em;
+     }
+/* end accessibility */

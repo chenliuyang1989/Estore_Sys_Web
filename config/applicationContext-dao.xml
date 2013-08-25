@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-lazy-init="true">
+
+	<!-- 这个是和实体相关的dao,所以scope是prototype的每个实体对应一个对象-->
+	<bean id="hedao" class="com.ibm.dao.hibernate.extend.HibernateEntityDao"
+		scope="prototype" lazy-init="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!--这个和具体实体无关,所有dao共享-->
+	<bean id="hgdao" class="com.ibm.dao.hibernate.generic.HibernateGenericDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!--使用泛型DAO作为抽象基类-->
+	<bean id="baseDao" class="com.gmcc.dao.hibernate.base.BaseDao"
+		abstract="true" depends-on="hedao,hgdao">
+		<property name="hedao">
+			<ref bean="hedao" />
+		</property>
+		<property name="hgdao">
+			<ref bean="hgdao" />
+		</property>
+	</bean>
+
+	<!-- 配置通用的的DAO -->
+	<bean id="genericDao" parent="baseDao" scope="prototype"/>
+    
+</beans>
